@@ -28,17 +28,19 @@
       <input type="date" name="birth" id="birth">
       <label for="number">Ingrese su numero de telefono</label>
       <input type="text" name="number" id="number">
-      <label for="free">Plan Gratis</label>
-      <input type="radio" name="free" id="plan">
-      <label for="plan pago">Plan Pago</label>
-      <input type="range" name="tres" id="plan" list="ticks" max="30">
-      <datalist id="ticks">
-        <option value="10"></option>
-        <option value="20"></option>
-        <option value="30"></option>
-      </datalist>
-      <label for="pro">Plan Pro</label>
-      <input type="checkbox" name="pro" id="plan">
+      <div>
+        <label for="form-plan">Plans</label>
+        <select id="form-plan" name="plan">
+          <option value="0">Free</option>
+          <optgroup label="Monthly">
+            <option value="199">1.99€/month</option>
+            <option value="599">5.99€/month</option>
+            <option value="1199">11.99€/month</option>
+          </optgroup>
+        </select>
+        <label for="form-pro">PRO plan</label>
+        <input id="form-pro" name="pro" type="checkbox" />
+      </div>
       <label for="credit">Ingrese el numero de su tarjeta de credito</label>
       <input type="text" name="credit" id="credit">
       <label for="CVC">Ingrese su numero CVC</label>
