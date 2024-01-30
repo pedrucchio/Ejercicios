@@ -1,0 +1,9 @@
+.card{
+    border: 1px solid;
+    width: fit-content;
+}
+
+section{
+    border: inherit;
+    padding: 10px;
+}
