@@ -22,7 +22,6 @@ nav{
     background-color: rgb(76, 73, 73);;
     color: white;
     display: flex;
-    justify-items: center;
 }
 
 select{
