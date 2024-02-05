@@ -11,7 +11,6 @@ body{
     border-right: 1px solid #D7DBDD;
     background-color: #FCFDFD;
     padding: 10px;
-    gap: 35rem;
 }
 
 a{
@@ -32,6 +31,13 @@ ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    height: 30vh;
 }
 
+.arriba{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 60vh;
+}
 
