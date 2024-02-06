@@ -1,0 +1,41 @@
+.calculadora{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr) ;
+    width: 10vw;
+    border: 1px solid black;
+}
+
+.pantalla{
+    grid-column: span 4;
+    background-color: #394348;
+    color: white;
+    text-align-last: end;
+}
+
+.igual{
+    grid-row: span 4;
+    border: 1px solid black;
+}
+
+.suma, .resta, .multi, .divi{
+    background-color: #cbd7df;
+    border: 1px solid #7b92a3;
+    text-align: center;
+}
+
+.siete,.ocho,.nueve,.cuatro,.cinco,.seis,.uno,.dos,.tres,.cero,.ac,.punto{
+    background-color: #ecf0f3;
+    border: 1px solid #7b92a3;
+    text-align: center;
+}
+
+.igual{
+    background-color: #ff656e;
+    border: 1px solid #7b92a3;
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+
