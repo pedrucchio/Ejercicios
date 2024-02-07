@@ -4,13 +4,19 @@ body{
     margin: 0;
 }
 
-
+section{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 50px;
+}
 
 #green{
     order: 3;
     background-color: #baffc9;
     height: 100vh;
     width: 20vw;
+    /* width: 20%; */
 }
 
 #yellow{
@@ -18,6 +24,7 @@ body{
     background-color: #ffffba;
     height: 100vh;
     width: 30vw;
+    /* width: 30%; */
 }
 
 #orange{
@@ -25,6 +32,7 @@ body{
     background-color: #ffdfba;
     height: 100vh;
     width: 50vw;
+    /* width: 50%; */
 }
 
 #red{
@@ -32,6 +40,7 @@ body{
     background-color: #ffb3ba;
     height: 100vh;
     width: 20vw;
+    /* width: 20%; */
 }
 
 #blue{
@@ -39,6 +48,7 @@ body{
     background-color: #bae1ff;
     height: 100vh;
     width: 20vw;
+    /* width: 20%; */
 }
 
 li{
@@ -49,10 +59,26 @@ li{
     text-align: justify;
     width: fit-content;
     padding: 30px;
+    margin: 0 auto;
 }
 
 ul{
     display: flex;
     gap:5rem;
     flex-direction: column;
+    padding: 0;
+}
+
+p{
+    text-align: center;
+}
+
+#red p,#orange p {
+  align-self: flex-start;
+  text-align: left;
+}
+
+.erase{
+    display: flex;
+
 }
