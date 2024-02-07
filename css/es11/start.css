@@ -1,0 +1,51 @@
+body{
+    display: grid;
+    gap:2rem;
+    height: 100vh;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+        "verde verde verde"
+        "amarillo rojo azul"
+        "naranja naranja azul";
+}
+
+#verde{
+    grid-area: verde;
+    background-color: #baffc9;
+}
+
+#amarillo{
+    grid-area: amarillo;
+    background-color: #ffffba;
+}
+
+#naranja{
+    grid-area: naranja;
+    background-color: #ffdfba;
+}
+
+#azul{
+    grid-area: azul;
+    background-color: #bae1ff;
+}
+
+#rojo{
+    grid-area: rojo;
+    background-color: #ffb3ba;
+}
+
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:5rem;
+}
+
+li{
+    border: 1px solid white;
+    background-color: white;
+    justify-items: center;
+    justify-self:center;
+    padding: 20px;
+}
