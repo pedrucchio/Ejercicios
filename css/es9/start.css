@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    gap:1rem;
+    margin: 0;
+}
+
+
+
+#green{
+    order: 3;
+    background-color: #baffc9;
+    height: 100vh;
+    width: 20vw;
+}
+
+#yellow{
+    order: 1;
+    background-color: #ffffba;
+    height: 100vh;
+    width: 30vw;
+}
+
+#orange{
+    order: 4;
+    background-color: #ffdfba;
+    height: 100vh;
+    width: 50vw;
+}
+
+#red{
+    order: 2;
+    background-color: #ffb3ba;
+    height: 100vh;
+    width: 20vw;
+}
+
+#blue{
+    order: 5;
+    background-color: #bae1ff;
+    height: 100vh;
+    width: 20vw;
+}
+
+li{
+    display: flex;
+    list-style: none;
+    border: 1px solid white;
+    background-color: white;
+    text-align: justify;
+    width: fit-content;
+    padding: 30px;
+}
+
+ul{
+    display: flex;
+    gap:5rem;
+    flex-direction: column;
+}
