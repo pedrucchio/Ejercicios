@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 170px;
+}
+
+li{
+    margin: 10px;
+}
+
+
+.boton{
+    background-color: rgb(76, 73, 73);
+    color: green;
+}
+
+.boton:hover{
+    background-color: green;
+    color: white;
+}
+
+nav{
+    background-color: rgb(76, 73, 73);;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+select{
+    background-color: rgb(76, 73, 73);
+    color: white;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .hamburger{
+        display: contents;
+    }
+    .menu{
+        display: none;
+    }
+}
+
