@@ -6,4 +6,4 @@ function sumUntil(maxValue) {
     return sum
 }
     
-    console.log(sumUntil(5)); // OUTPUT: 15
+console.log(sumUntil(5)); // OUTPUT: 15
