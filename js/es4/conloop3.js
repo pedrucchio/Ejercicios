@@ -3,7 +3,7 @@ function sumUntil(maxValue) {
     for (let i = 1; i <= maxValue; i++) {
         sum = sum + i;
     }
-    return sum
+    return sum;
 }
     
 console.log(sumUntil(5)); // OUTPUT: 15
