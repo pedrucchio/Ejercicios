@@ -24,7 +24,7 @@ class Square {
             } else  if (figura instanceof Rectangle) {
                 return figura.width * figura.height;
             } else if (figura instanceof Circle) {
-                return figura.radius * Math.PI;
+                return figura.radius ** 2 * Math.PI;
             }
         }
     }
