@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario"/>
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi"/>
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25"/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  const nombre = document.getElementById("firstName").value;
+  const apellido = document.getElementById("lastName").value;
+  const edad = document.getElementById("age").value;
+  console.log(`First Name: ${nombre}`);
+  console.log(`Last Name: ${apellido}`);
+  console.log(`Age: ${edad}`);
+</script>
