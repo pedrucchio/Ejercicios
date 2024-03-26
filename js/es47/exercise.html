@@ -20,10 +20,10 @@
 </html>
 
 <script>
-  const nombre = document.getElementById("firstName").value;
-  const apellido = document.getElementById("lastName").value;
-  const edad = document.getElementById("age").value;
-  console.log(`First Name: ${nombre}`);
-  console.log(`Last Name: ${apellido}`);
-  console.log(`Age: ${edad}`);
+  const input = document.querySelectorAll(".form-input");
+  input.forEach((item) => {
+    const titulo = item.previousElementSibling.textContent;
+    const valor = item.value;
+    console.log(`${titulo} ${valor}`);
+  })
 </script>
