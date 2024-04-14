@@ -4,11 +4,11 @@ export function Welcome({ name = "World",age}) {
     return (
         <div>
             <p>Welcome <strong>{ name }</strong></p>
-            <Age age = {17}/>
-            {18 < age && <Age age ={ 28 }/>}
-            {age && <Age age ={ 28 }/>}
-            {(18 < age && age < 65) && <Age age ={ 28 }/>}
-            {(18 < age && age < 65 && (name === "John")) && <Age age ={ 28 }/>}
+            <Age age = { age }/>
+            {18 < age && <Age age ={ age }/>}
+            {age && <Age age ={ age }/>}
+            {(18 < age && age < 65) && <Age age ={ age }/>}
+            {(18 < age && age < 65 && (name === "John")) && <Age age ={ age }/>}
         </div>
     )
 }
