@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
 export function Counter({ initialValue,incrementAmount }) {
     const [counter,setCounter] = useState(initialValue);
+
+    useEffect(() =>{
+        console.log(`El contador es ${counter}`);
+    },[counter])
 
     function handleIncrement() {
         setCounter((c) => c+incrementAmount);
