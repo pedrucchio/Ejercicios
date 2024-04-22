@@ -26,6 +26,14 @@ function InteractiveWelcome() {
     console.log(welcomeName)
   }
 
+  function handleReset() {
+    setWelcomeName({
+      user: "",
+      password: "",
+      remember: false
+    })
+  }
+
  
 
   
@@ -35,7 +43,7 @@ function InteractiveWelcome() {
       <input type="text"  name='user' value={ welcomeName.user } onChange={handleNameChange} />
       <input type="text"  name='password' value={ welcomeName.password } onChange={handleNameChange} />
       <input type="checkbox" checked={welcomeName.remember} name="remember" value={ welcomeName.remember } onChange={handleNameChange}/>
-      <Login user={ welcomeName.user } password={ welcomeName.password } handleClick={handleClick}/>
+      <Login user={ welcomeName.user } password={ welcomeName.password } handleClick={handleClick} handleReset={handleReset}/>
       <Welcome name ={ welcomeName.user }/>
     </div>
   )
