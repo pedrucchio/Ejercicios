@@ -23,7 +23,7 @@ function InteractiveWelcome() {
   }
 
   function handleClick(event) {
-    event.preventDeafult();
+    event.preventDefault();
     console.log(welcomeName.user);
     console.log(welcomeName.password);
     console.log(welcomeName.remember);
@@ -43,11 +43,11 @@ function InteractiveWelcome() {
 
   return (
     <div>
-      <form action="submit" onSubmit={handleClick}>
+      <form onSubmit={handleClick}>
         <input type="text"  name='user' value={ welcomeName.user } onChange={handleNameChange} />
         <input type="password"  name='password' value={ welcomeName.password } onChange={handleNameChange} />
         <input type="checkbox" checked={welcomeName.remember} name="remember" value={ welcomeName.remember } onChange={handleNameChange}/>
-        <Login user={ welcomeName.user } password={ welcomeName.password } handleClick={handleClick} handleReset={handleReset}/>
+        <Login user={ welcomeName.user } password={ welcomeName.password } handleReset={handleReset}/>
         <Welcome name ={ welcomeName.user }/>
       </form>
     </div>
