@@ -24,9 +24,7 @@ function InteractiveWelcome() {
 
   function handleClick(event) {
     event.preventDefault();
-    console.log(welcomeName.user);
-    console.log(welcomeName.password);
-    console.log(welcomeName.remember);
+    console.log(welcomeName);
   }
 
   function handleReset() {
