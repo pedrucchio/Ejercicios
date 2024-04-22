@@ -3,7 +3,7 @@ import React from 'react'
 function Login({ user,password,handleClick,handleReset}) {
   return (
     <div>
-      <button disabled={(!user || !password)} onClick={handleClick}>Login</button>
+      <button type="submit" disabled={(!user || !password)} onClick={handleClick}>Login</button>
       <button onClick={handleReset}>Reset</button>
     </div>
   )
