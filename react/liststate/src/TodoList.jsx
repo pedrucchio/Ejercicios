@@ -15,8 +15,10 @@ function TodoList() {
   }
 
   function handleDeleteElement(item) {
-    const filteredTodos = todos.filter(todo => todo !== item);
-    setTodos(filteredTodos);
+    const index = todos.indexOf(item); // Find the index of the first occurrence of the item
+    const newTodos = [...todos]; // Create a copy of the todos array
+    newTodos.splice(index, 1); // Remove the item at the found index
+    setTodos(newTodos); // Update the todos state
   }
 
   return (
