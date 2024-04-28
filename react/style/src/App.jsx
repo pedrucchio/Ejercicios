@@ -1,3 +1,5 @@
+import { Clock } from './Clock'
+import TodoList from './TodoList'
 import { Welcome } from './Welcome'
 
 function App() {
@@ -5,6 +7,8 @@ function App() {
   return (
     <div>
       <Welcome name='John' age={30}/>
+      <Clock />
+      <TodoList />
     </div>
   )
 }
