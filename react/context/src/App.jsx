@@ -6,15 +6,17 @@ import { LanguageContext } from './LanguageContext'
 function App() {
   const [language,setLanguage] = useState("en");
 
-  function handleLanguage(language) {
-    setLanguage(language)
+  function handleLanguage(event) {
+    setLanguage(event.target.value)
   }
 
   return (
     <div>
-      <button onClick={()=> handleLanguage("es")}>ES</button>
-      <button onClick={()=> handleLanguage("en")}>EN</button>
       <LanguageContext.Provider value={language}>
+        <select onChange={handleLanguage} name="selectLanguage" id="">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
         <Clock />
       </LanguageContext.Provider>
     </div>
