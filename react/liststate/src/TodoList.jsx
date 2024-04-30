@@ -24,8 +24,8 @@ function TodoList() {
   return (
     <div>
       <ul>
-        {todos.map((item) => {
-            return <li>
+        {todos.map((item,index) => {
+            return <li key={index}>
               {item}
               <button onClick={() => handleDeleteElement(item)}>Reset element</button>
             </li>
