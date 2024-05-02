@@ -1,4 +1,5 @@
 import { Counter } from "./Counter"
+import CurrentLocation from "./CurrentLocation"
 import GithubUsers from "./GithubUsers"
 import InteractiveWelcome from "./InteractiveWelcome"
 
@@ -8,6 +9,7 @@ function App() {
       <Counter />
       <InteractiveWelcome />
       <GithubUsers />
+      <CurrentLocation />
     </div>
   )
 }
