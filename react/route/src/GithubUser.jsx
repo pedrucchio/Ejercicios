@@ -27,7 +27,10 @@ function GithubUser() {
 
   useEffect(()=>{
     fetchGithubUser(username)
+    
   },[username])
+  console.log(username);
+  console.log("hola");
 
   return (
     <div>
