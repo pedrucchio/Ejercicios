@@ -29,8 +29,6 @@ function GithubUser() {
     fetchGithubUser(username)
     
   },[username])
-  console.log(username);
-  console.log("hola");
 
   return (
     <div>

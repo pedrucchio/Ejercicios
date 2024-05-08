@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export function GithubUsers() {
 	const [users, setUsers] = useState([]);
@@ -28,6 +28,7 @@ export function GithubUsers() {
 			)}
 			{error && <div>{error.message}</div>}
 			{loading && <div>Loading...</div>}
+			<Outlet />
 		</div>
 	);
 }

@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<Welcome name="Juan" />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/users" element={<GithubUsers />} >
+          <Route index element={<p>Seleccione un usuario</p>}/>
           <Route path=":username" element={<GithubUser />} />
         </Route >
         <Route path="*" element={<div>Not Found!</div>} />
