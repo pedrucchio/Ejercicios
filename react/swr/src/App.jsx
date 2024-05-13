@@ -9,16 +9,8 @@ function App() {
     <div>
         <Routes>
           <Route path="/" element={<GithubUsers />} />
-          <Route path="/:usernames" element={<GithubUser />} />
           <Route path="/*" element={<div>Not Found</div>} />
         </Routes>
-        <ul>
-          <li>
-            <Link className='link-styles' to={"users"}>
-              Users
-            </Link>
-            </li>
-        </ul>
     </div>
   )
 }
