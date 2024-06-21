@@ -4,6 +4,7 @@ const pgPromise = require("pg-promise");
 const jwt = require("jsonwebtoken")
 const dotenv = require("dotenv")
 dotenv.config();
+const passport = require("passport")
 
 
 
@@ -166,6 +167,12 @@ const planetasSchema = Joi.object({
     }
    }
 
+   const logOut = async (req, res) =>{
+    const user = req.user;
+    await db.none(`UPDATE users SET token=$2 WHERE id=$1`,[user?.id,null])
+    res.status(200).json({msg:"Logout successfull"})
+   }
+
 module.exports = {
-    db,getAll, getOneById, create, updateById, deleteById,uploadImage,logIn,signUp
+    db,getAll, getOneById, create, updateById, deleteById,uploadImage,logIn,signUp,logOut
 }

@@ -1,7 +1,8 @@
 const express = require("express")
 const router = express.Router();
-const { getAll, getOneById, create, updateById, deleteById,uploadImage,logIn,signUp } = require("../contollers/mainController.js")
+const { getAll, getOneById, create, updateById, deleteById,uploadImage,logIn,signUp,logOut } = require("../contollers/mainController.js")
 const secondController = require("../contollers/secondController.js")
+const authorize = require("../authorize.js")
 
 const multer  = require('multer');
 const storage = multer.diskStorage({
@@ -34,5 +35,7 @@ router.post("/api/planets/:id/image",upload.single('planet'),uploadImage)
 router.post("/api/users/login",logIn)
 
 router.post("/api/users/signup",signUp)
+
+router.get("/api/users/logout",authorize,logOut)
 
 module.exports = router   
