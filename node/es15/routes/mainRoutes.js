@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const { getAll, getOneById, create, updateById, deleteById,uploadImage } = require("../contollers/mainController.js")
+const { getAll, getOneById, create, updateById, deleteById,uploadImage,logIn,signUp } = require("../contollers/mainController.js")
 const secondController = require("../contollers/secondController.js")
 
 const multer  = require('multer');
@@ -30,5 +30,9 @@ router.delete("/api/planets/:id", deleteById)
 router.delete("/api/planets/deleteall", secondController.deleteAllPlanets)
 
 router.post("/api/planets/:id/image",upload.single('planet'),uploadImage)
+
+router.post("/api/users/login",logIn)
+
+router.post("/api/users/signup",signUp)
 
 module.exports = router   
