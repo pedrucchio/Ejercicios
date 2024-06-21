@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router();
 const { getAll, getOneById, create, updateById, deleteById,uploadImage } = require("../contollers/mainController.js")
 const secondController = require("../contollers/secondController.js")
+
 const multer  = require('multer');
 const storage = multer.diskStorage({
   destination: function (req,file,cb){
@@ -11,6 +12,7 @@ const storage = multer.diskStorage({
     cb(null,file.originalname)
   }
 })
+
 const upload =multer({storage:storage})
 
 // let planets = require("../data/planets.json ")
