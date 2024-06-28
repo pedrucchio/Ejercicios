@@ -1,23 +1,31 @@
-const dotenv = require("dotenv")
-dotenv.config();
-import passport from "passport";
-import passportJWT from "passport-jwt";
-import {db} from "./contollers/mainController"
+const passport = require("passport");
+const passportJWT = require("passport-jwt");
+const { db } = require("./contollers/mainController");
 
-const {SECRET} = process.env;
+const { SECRET } = process.env;
+
+const JwtStrategy = passportJWT.Strategy;
+const ExtractJwt = passportJWT.ExtractJwt;
 
 passport.use(
-    new passportJWT.Strategy({
-        secretOrKey: SECRET,
-        jwtFromRequest: passportJWT.ExtractJwt.fromAuthHeaderAsBearerToken()
+  new JwtStrategy(
+    {
+      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      secretOrKey: SECRET,
     },
-    async(payload,done)=>{
-        const user = db.one(`SELECT * FROM users WHERE id=$1`,payload.id)
-        console.log(user);
-        try {
-            return user ? done(null,user) : done(new Error("User not found"))
-        } catch (error) {
-            done(error)
+    async (jwtPayload, done) => {
+      try {
+        const user = await db.oneOrNone("SELECT * FROM users WHERE id = $1", jwtPayload.id);
+        if (user) {
+          return done(null, user);
+        } else {
+          return done(null, false);
         }
-    })
-)
+      } catch (error) {
+        return done(error, false);
+      }
+    }
+  )
+);
+
+module.exports = passport;
